@@ -72,11 +72,12 @@ const Detail = () => {
               </h1>
               <h1 className="text-sm">{anime.data?.data.status}</h1>
               <h1 className="text-sm">
-                {anime.data?.data.aired.from.slice(0, 10)}
-                {anime.data?.data.aired.to && (
-                  <span> to {anime.data?.data.aired.to.slice(0, 10)}</span>
-                )}
-                {!anime.data?.data.aired.to && <span> to ???</span>}
+                {anime.data?.data.aired.from
+                  ? `${anime.data?.data.aired.from.slice(0, 10)} `
+                  : "??? "}
+                {anime.data?.data.aired.to
+                  ? `to ${anime.data?.data.aired.to.slice(0, 10)}`
+                  : "to ???"}
               </h1>
               <h1 className="text-sm">{anime.data?.data.rating}</h1>
               <h1 className="text-sm">rank: {anime.data?.data.rank}</h1>
