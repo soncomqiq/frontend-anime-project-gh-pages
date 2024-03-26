@@ -23,6 +23,7 @@ export default function Home() {
           <RandomCha />
         </div>
       </div>
+
       <Footer />
     </div>
   );

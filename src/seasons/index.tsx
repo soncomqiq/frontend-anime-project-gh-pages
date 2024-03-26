@@ -5,6 +5,7 @@ import { AnimeArrData } from "../data/animeArrData";
 import { AnimeData } from "../data/animeArrData";
 import ReactLoading from "react-loading";
 import { Link } from "react-router-dom";
+import { AnimeCard } from "../Components/AnimeCard";
 
 type SeasonType = {
   data: AnimeArrData | undefined;
@@ -149,23 +150,11 @@ const Seasons = () => {
               {season.data?.data?.map((anime: AnimeData, index: number) => {
                 // console.log(anime);
                 return (
-                  <div
+                  <AnimeCard
+                    saved={Boolean(localStorage.getItem(anime.title))}
+                    anime={anime}
                     key={index}
-                    className="w-[220px] col-span-1 rounded-lg overflow-hidden m-auto"
-                  >
-                    <Link to={`detail/${anime.mal_id}`}>
-                      <img
-                        src={anime.images.webp.large_image_url}
-                        alt=""
-                        className="h-[300px] w-full m-auto object-cover rounded-t-lg"
-                      />
-                      <div className="p-2 w-full text-center bg-white shadow-lg rounded-b-lg">
-                        <h1 className="text-sm text-[#B4B4B8] self-center">
-                          {`${anime.title}`}
-                        </h1>
-                      </div>
-                    </Link>
-                  </div>
+                  />
                 );
               })}
             </div>
