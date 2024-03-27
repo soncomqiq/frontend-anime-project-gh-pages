@@ -53,10 +53,10 @@ const SearchAnime = () => {
   // console.log("res", anime);
 
   return (
-    <div className="rounded-lg overflow-hidden h-[1700px] text-blueGray-600 bg-[#E3E1D9]">
-      <div className="grid grid-cols-3 bg-[#E3E1D9]">
-        <div className="col-span-1 col-start-2">
-          <div className="p-3 w-full flex justify-center items-center gap-3">
+    <div className="rounded-lg overflow-hidden h-full text-blueGray-600 bg-[#E3E1D9]">
+      <div className="grid grid-cols-2 lg:grid-cols-3 p-3">
+        <div className="col-span-1 col-start-1 lg:col-start-2 flex items-center">
+          <div className="w-full flex justify-center gap-3">
             <h1 className="text-xl">search your anime</h1>
             <img
               src="https://www.svgrepo.com/show/532552/search-alt-2.svg"
@@ -85,7 +85,7 @@ const SearchAnime = () => {
       </div>
 
       {anime.loading && (
-        <div className="h-screen flex justify-center items-center">
+        <div className="h-full flex justify-center items-center">
           <ReactLoading type="spin" color="#fff" />
         </div>
       )}

@@ -43,48 +43,46 @@ const ReccomendAnime = () => {
   console.log("rec", recAnime);
 
   return (
-    <div>
-      <div className="w-full bg-[#E3E1D9] rounded-lg overflow-hidden text-blueGray-600 m-auto h-[550px]">
-        <div className="p-3 w-full text-center bg-[#E3E1D9]">
-          <h1 className="text-xl">
-            Anime Reccomendations{" "}
-            <img
-              src="https://www.svgrepo.com/show/506715/fire.svg"
-              className="w-5 h-5 inline-block"
-            />
-            <img
-              src="https://www.svgrepo.com/show/506715/fire.svg"
-              className="w-5 h-5 inline-block"
-            />
-            <img
-              src="https://www.svgrepo.com/show/506715/fire.svg"
-              className="w-5 h-5 inline-block"
-            />
-          </h1>
-        </div>
+    <div className="bg-[#E3E1D9] rounded-lg overflow-hidden text-blueGray-600 h-full">
+      <div className="p-3 w-full text-center">
+        <h1 className="text-xl">
+          Anime Reccomendations{" "}
+          <img
+            src="https://www.svgrepo.com/show/506715/fire.svg"
+            className="w-5 h-5 inline-block"
+          />
+          <img
+            src="https://www.svgrepo.com/show/506715/fire.svg"
+            className="w-5 h-5 inline-block"
+          />
+          <img
+            src="https://www.svgrepo.com/show/506715/fire.svg"
+            className="w-5 h-5 inline-block"
+          />
+        </h1>
+      </div>
 
-        <div className="h-[500px] w-full">
-          <Carousel indicators={false}>
-            {recAnime.data?.data.map((anime: AnimeRecommed, index: number) => {
-              return (
-                <Link to={`detail/${anime.entry[0].mal_id}`} key={index}>
-                  <div>
-                    <img
-                      src={anime.entry[0].images.webp.large_image_url}
-                      className="block m-auto w-auto h-[400px] rounded-lg object-cover"
-                      alt="..."
-                    />
-                    <div className="p-2 w-full h-[50px] text-center bg-[#E3E1D9] rounded-b-lg">
-                      <h1 className="text-md text-[#B4B4B8] self-center">
-                        {`${anime.entry[0].title}`}
-                      </h1>
-                    </div>
+      <div className="h-[90%] w-full">
+        <Carousel indicators={false}>
+          {recAnime.data?.data.map((anime: AnimeRecommed, index: number) => {
+            return (
+              <Link to={`detail/${anime.entry[0].mal_id}`} key={index}>
+                <div>
+                  <img
+                    src={anime.entry[0].images.webp.large_image_url}
+                    className="block m-auto w-auto h-[350px] rounded-lg object-cover"
+                    alt="..."
+                  />
+                  <div className="p-1 w-full h-[50px] text-center bg-[#E3E1D9] rounded-b-lg">
+                    <h1 className="text-[#B4B4B8]">
+                      {`${anime.entry[0].title}`}
+                    </h1>
                   </div>
-                </Link>
-              );
-            })}
-          </Carousel>
-        </div>
+                </div>
+              </Link>
+            );
+          })}
+        </Carousel>
       </div>
     </div>
   );

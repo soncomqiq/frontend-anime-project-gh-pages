@@ -45,9 +45,9 @@ const RandomAnime = () => {
     return () => {};
   }, []);
   return (
-    <div className="h-[550px] rounded-lg overflow-hidden text-blueGray-600">
-      <div className="grid grid-rows-2 gap-3">
-        <div className="p-3 w-full bg-[#E3E1D9] flex justify-center items-center gap-3">
+    <div className="bg-[#E3E1D9] rounded-lg overflow-hidden text-blueGray-600 h-full">
+      <div className="grid grid-rows-2 h-[20%]">
+        <div className="p-3 bg-[#E3E1D9] flex justify-center items-center gap-2">
           <h1 className="text-xl">random anime</h1>
           <img
             src="https://www.svgrepo.com/show/488669/random.svg"

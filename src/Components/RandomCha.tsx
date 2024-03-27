@@ -63,9 +63,9 @@ const RandomCha = () => {
   }
 
   return (
-    <div className="h-[550px] text-blueGray-600">
-      <div className="grid grid-rows-2 gap-3">
-        <div className="p-3 w-full bg-[#E3E1D9] flex justify-center items-center gap-3">
+    <div className="text-blueGray-600 rounded-lg overflow-hidden text-blueGray-600 h-full bg-[#E3E1D9]">
+      <div className="grid grid-rows-2 h-[20%]">
+        <div className="p-3 w-full flex justify-center items-center gap-3">
           <h1 className="text-xl">mini game</h1>
           <img
             src="https://www.svgrepo.com/show/516580/games-2.svg"
@@ -83,10 +83,10 @@ const RandomCha = () => {
         </div>
       </div>
 
-      <div className="p-3">
-        <div className="w-full">
+      <div className="p-3 h-[80%]">
+        <div className="h-[80%]">
           {ranCha.loading && (
-            <div className="h-[350px] flex justify-center items-center">
+            <div className="h-full flex justify-center items-center">
               <ReactLoading type="spin" color="#fff" />
             </div>
           )}
@@ -95,24 +95,25 @@ const RandomCha = () => {
             <img
               src={ranCha.data?.data.images.webp.image_url}
               alt=""
-              className="h-[350px] w-auto rounded-md m-auto shadow-xl"
+              className="h-full w-auto rounded-md m-auto shadow-xl"
             />
           )}
         </div>
-        <form onSubmit={handleSubmit}>
-          <div className="flex gap-3 items-center mt-3">
-            <input
-              className="h-10 ml-3 min-w-[12rem] shadow-xl rounded-lg indent-3 focus:outline-none focus:ring focus:ring-[#B4B4B8]"
-              type="text"
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-              placeholder="character's name"
-            />
+        <form
+          onSubmit={handleSubmit}
+          className="h-[20%] flex gap-3 items-center mt-3"
+        >
+          <input
+            className="h-10 ml-3 min-w-[12rem] shadow-xl rounded-lg indent-3 focus:outline-none focus:ring focus:ring-[#B4B4B8]"
+            type="text"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            placeholder="character's name"
+          />
 
-            <button className="h-10 min-w-[8rem] shadow-xl rounded-lg border-2 border-[#F2EFE5] bg-[#E3E1D9] hover:bg-[#F2EFE5] focus:outline-none focus:ring focus:ring-[#B4B4B8]">
-              Answer
-            </button>
-          </div>
+          <button className="h-10 min-w-[8rem] shadow-xl rounded-lg border-2 border-[#F2EFE5] bg-[#E3E1D9] hover:bg-[#F2EFE5] focus:outline-none focus:ring focus:ring-[#B4B4B8]">
+            Answer
+          </button>
         </form>
       </div>
     </div>
