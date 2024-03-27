@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="bg-[#F2EFE5] min-h-screen m-auto box-border font-mono selection:bg-[#F2EFE5]">
       <Header />
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 container m-auto grid-rows-[repeat(3,500px)]">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 container m-auto grid-rows-3">
         <div className="col-span-1 row-span-1 row-start-2 lg:row-start-1">
           <ReccomendAnime />
         </div>

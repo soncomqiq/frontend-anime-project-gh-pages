@@ -53,7 +53,7 @@ const SearchAnime = () => {
   // console.log("res", anime);
 
   return (
-    <div className="rounded-lg overflow-hidden h-[1650px] text-blueGray-600 bg-[#E3E1D9]">
+    <div className="rounded-lg overflow-hidden h-[1700px] text-blueGray-600 bg-[#E3E1D9]">
       <div className="grid grid-cols-3 bg-[#E3E1D9]">
         <div className="col-span-1 col-start-2">
           <div className="p-3 w-full flex justify-center items-center gap-3">
