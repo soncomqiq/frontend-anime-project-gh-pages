@@ -91,7 +91,7 @@ const SearchAnime = () => {
       )}
 
       {!anime.loading && (
-        <div className="h-full grid grid-cols-4 text-center p-3 gap-3 overflow-y-auto">
+        <div className="h-full grid grid-cols-4 text-center p-3 gap-2 overflow-y-auto">
           {anime.data?.data.map((anime: AnimeData, index: number) => {
             return (
               <AnimeCard

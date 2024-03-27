@@ -57,12 +57,10 @@ const Detail = () => {
               <h1 className="w-full h-[5%] text-center font-bold text-md">
                 Trailer
               </h1>
-              <video
+              <iframe
+                src={`https://www.youtube.com/embed/${anime.data?.data.trailer?.youtube_id}`}
                 className="w-full h-[95%] rounded-lg overflow-hidden"
-                controls
-              >
-                <source src={anime.data?.data.trailer?.url} type="video/mp4" />
-              </video>
+              ></iframe>
             </div>
           </div>
           <div className="col-span-1 row-span-1">
@@ -73,8 +71,8 @@ const Detail = () => {
               <h1 className="text-sm">{anime.data?.data.status}</h1>
               <h1 className="text-sm">
                 {anime.data?.data.aired.from
-                  ? `${anime.data?.data.aired.from.slice(0, 10)} `
-                  : "??? "}
+                  ? `from ${anime.data?.data.aired.from.slice(0, 10)} `
+                  : "from ??? "}
                 {anime.data?.data.aired.to
                   ? `to ${anime.data?.data.aired.to.slice(0, 10)}`
                   : "to ???"}

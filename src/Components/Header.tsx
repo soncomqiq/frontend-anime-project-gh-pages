@@ -18,7 +18,7 @@ const Header = () => {
           <li className="hover:text-white">seasons</li>
         </Link>
         <Link to={`/favorites`}>
-          <li className="hover:text-white">contact</li>
+          <li className="hover:text-white">favorites</li>
         </Link>
       </ul>
     </div>
