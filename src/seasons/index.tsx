@@ -4,7 +4,6 @@ import axios from "axios";
 import { AnimeArrData } from "../data/animeArrData";
 import { AnimeData } from "../data/animeArrData";
 import ReactLoading from "react-loading";
-import { Link } from "react-router-dom";
 import { AnimeCard } from "../Components/AnimeCard";
 
 type SeasonType = {
