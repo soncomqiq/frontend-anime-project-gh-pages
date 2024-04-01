@@ -5,33 +5,33 @@ import Detail from "./details";
 import Seasons from "./seasons";
 import Favorites from "./favorites";
 
-const BASE_URL = "/frontend-anime-project-gh-pages";
+const BASE_URL = "/frontend-anime-project-gh-pages/";
 
 function App() {
   const router = createBrowserRouter(
     [
       {
-        path: BASE_URL + "/",
+        path: "/",
         element: <Home />,
       },
       {
-        path: BASE_URL + "/detail/:mal_id",
+        path: "/detail/:mal_id",
         element: <Detail />,
       },
       {
-        path: BASE_URL + "/seasons",
+        path: "/seasons",
         element: <Seasons />,
       },
       {
-        path: BASE_URL + "/favorites",
+        path: "/favorites",
         element: <Favorites />,
       },
       {
-        path: BASE_URL + "/favorites/detail/:mal_id",
+        path: "/favorites/detail/:mal_id",
         element: <Detail />,
       },
       {
-        path: BASE_URL + "/seasons/detail/:mal_id",
+        path: "/seasons/detail/:mal_id",
         element: <Detail />,
       },
     ],
